@@ -87,6 +87,9 @@
     </section>
 
     <section class="contact-section">
+      <div id="success-message" style="display: none; padding: 1rem; background-color: #d1e7dd; color: #0f5132; border-radius: 5px; margin-bottom: 1rem;">
+        Thank you! Your message has been sent.
+      </div>
       <div class="contact-intro">
         <h2 class="contact-title">Get in Touch</h2>
         <p class="contact-description">
@@ -96,33 +99,40 @@
 
       <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
-      <input type="hidden" name="access_key" value="742a9ce8-b665-4194-b75c-b19f2506158c" />
-      <input type="hidden" name="subject" value="New Contact Form Submission" />
-      <input type="hidden" name="from_name" value="aaronTjerslandElectrical" />
-      <input type="hidden" name="redirect" value="https://atjersland.github.io/aaronTjerslandElectrical/">
+        <input type="hidden" name="access_key" value="742a9ce8-b665-4194-b75c-b19f2506158c" />
+        <input type="hidden" name="subject" value="New Contact Form Submission" />
+        <input type="hidden" name="from_name" value="aaronTjerslandElectrical" />
+        <input type="hidden" name="redirect" value="https://atjersland.github.io/aaronTjerslandElectrical/?success=true">
 
-      <div class="form-group-container">
-        <div class="form-group">
-          <label for="name" class="form-label">Name</label>
-          <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+
+        <div class="form-group-container">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone</label>
+            <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email" class="form-label">Email</label>
-          <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
-        </div>
-        <div class="form-group">
-          <label for="phone" class="form-label">Phone</label>
-          <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
-        </div>
-        <div class="form-group">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
-        </div>
-      </div>
-      <button class="form-submit" type="submit">Send Message</button>
-    </form>
-  </section>
+        <button class="form-submit" type="submit">Send Message</button>
+      </form>
+    </section>
 
   </div>
 </body>
+<script>
+  // Show success message if URL contains ?success=true
+  if (window.location.search.includes('success=true')) {
+    document.getElementById('success-message').style.display = 'block';
+  }
+</script>
 </html>
