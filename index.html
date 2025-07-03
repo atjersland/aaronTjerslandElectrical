@@ -88,20 +88,27 @@
 
     <section>
       <h2>Contact Form</h2>
-      <form id="contactform" action="https://formsubmit.io/send/abtjersland@comcast.net" method="POST">
-        <input name="name" type="text" id="name">
+      <form id="contactform" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="
+742a9ce8-b665-4194-b75c-b19f2506158c">
+        
+        <label for="message">Name</label>
+        <input name="message" type="text" id="name">
+        
+        <label for="email">Email</label>
         <input name="email" type="email" id="email">
+        
+        <label for="phoneNumber">Phone Number</label>
         <input name="phoneNumber" type="tel" id="phoneNumber">
-        <textarea name="Message" id="message" rows="3"></textarea>
+        
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="3"></textarea>
 
         <input name="_formsubmit_id" type="text" style="display:none">
 
         <input value="Send" type="submit">
       </form>
     </section>
-  </div>
-</body>
-</html>
   </div>
 </body>
 </html>
