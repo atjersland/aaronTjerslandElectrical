@@ -74,33 +74,34 @@
 </head>
 <body>
   <header>
-    <h1>BrightSpark Electric</h1>
+    <h1>Aaron Tjersland Electrical</h1>
     <p>Reliable Electrical Services for Homes and Businesses</p>
   </header>
 
   <div class="container">
     <section class="contact-info">
       <h2>Contact Information</h2>
-      <p><strong>Phone:</strong> (555) 123-4567</p>
-      <p><strong>Email:</strong> info@brightsparkelectric.com</p>
-      <p><strong>Location:</strong> Springfield, USA</p>
+      <p><strong>Phone:</strong> (***) ****-****</p>
+      <p><strong>Email:</strong> aftjersland@comcast.net</p>
+      <p><strong>Location:</strong> Dartmouth, Ma</p>
     </section>
 
     <section>
       <h2>Contact Form</h2>
-      <form>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+      <form id="contactform" action="https://formsubmit.io/send/abtjersland@comcast.net" method="POST">
+        <input name="name" type="text" id="name">
+        <input name="email" type="email" id="email">
+        <input name="phoneNumber" type="tel" id="phoneNumber">
+        <textarea name="Message" id="message" rows="3"></textarea>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <input name="_formsubmit_id" type="text" style="display:none">
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
+        <input value="Send" type="submit">
       </form>
     </section>
+  </div>
+</body>
+</html>
   </div>
 </body>
 </html>
